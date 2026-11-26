@@ -212,7 +212,7 @@
             <span class="inline-flex min-h-8 w-fit items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-purple-950"><i class="fa-solid fa-sun" aria-hidden="true"></i> У власному темпі</span>
           </div>
 
-          <div class="mt-10 grid items-start gap-5 lg:grid-cols-3">
+          <div class="mt-10 grid items-stretch gap-5 lg:grid-cols-3">
             <article id="breathing" class="flex scroll-mt-24 flex-col rounded-2xl border border-purple-100 bg-white p-6 shadow-sm transition hover:shadow-md">
               <div class="flex items-start justify-between gap-3">
                 <span class="grid size-12 place-items-center rounded-2xl bg-purple-100 text-purple-800" aria-hidden="true"><i class="fa-solid fa-wind text-xl"></i></span>
@@ -224,42 +224,42 @@
                 <span>Твій ритм</span>
                 <span>Дихання</span>
               </div>
-              <details class="group mt-4">
-                <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
+              <details name="exercise-card" class="group mt-auto pt-4 open:flex open:flex-col">
+                <summary class="order-2 flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
                   <span class="group-open:hidden">Налаштувати вправу</span><span class="hidden group-open:inline">Згорнути</span>
                   <i class="fa-solid fa-chevron-down text-xs transition group-open:rotate-180" aria-hidden="true"></i>
                 </summary>
-                <div data-breath-widget class="mt-4 space-y-4">
+                <div data-breath-widget class="order-1 mt-4 space-y-4">
                   <p class="text-sm leading-6 text-slate-600">Задай час і тривалість фаз. Таймер пройде кожну фазу у вибраному ритмі та зупиниться після заданого часу.</p>
                   <fieldset data-breath-role="settings" class="grid min-w-0 gap-4 sm:grid-cols-2">
                     <legend class="sr-only">Параметри дихальної вправи</legend>
-                    <div>
-                      <label class="block text-sm font-semibold text-purple-950">
-                        Час на вправу, хвилини
+                    <div class="flex h-full flex-col">
+                      <label class="flex h-full flex-col text-sm font-semibold text-purple-950">
+                        <span class="block min-h-12">Час на вправу, хвилини</span>
                         <input name="breathTime" data-breath-role="time" type="number" min="1" max="10" step="1" value="2" required class="mt-2 min-h-12 w-full rounded-xl border border-purple-200 bg-white px-4 py-3 text-slate-800 shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
                         <span class="mt-2 block text-sm font-normal text-slate-500">Від 1 до 10 хвилин.</span>
                       </label>
                       <span data-breath-role="error-time" class="sr-only"></span>
                     </div>
-                    <div>
-                      <label class="block text-sm font-semibold text-purple-950">
-                        Вдих, секунди
+                    <div class="flex h-full flex-col">
+                      <label class="flex h-full flex-col text-sm font-semibold text-purple-950">
+                        <span class="block min-h-12">Вдих, секунди</span>
                         <input name="breathInhale" data-breath-role="inhale" type="number" min="1" max="10" step="1" value="4" required class="mt-2 min-h-12 w-full rounded-xl border border-purple-200 bg-white px-4 py-3 text-slate-800 shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
                         <span class="mt-2 block text-sm font-normal text-slate-500">Від 1 до 10 секунд.</span>
                       </label>
                       <span data-breath-role="error-inhale" class="sr-only"></span>
                     </div>
-                    <div>
-                      <label class="block text-sm font-semibold text-purple-950">
-                        Пауза після вдиху, секунди
+                    <div class="flex h-full flex-col">
+                      <label class="flex h-full flex-col text-sm font-semibold text-purple-950">
+                        <span class="block min-h-12">Пауза після вдиху, секунди</span>
                         <input name="breathPause" data-breath-role="pause" type="number" min="0" max="10" step="1" value="0" class="mt-2 min-h-12 w-full rounded-xl border border-purple-200 bg-white px-4 py-3 text-slate-800 shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
                         <span class="mt-2 block text-sm font-normal text-slate-500">Від 0 до 10 секунд. 0 — без паузи.</span>
                       </label>
                       <span data-breath-role="error-pause" class="sr-only"></span>
                     </div>
-                    <div>
-                      <label class="block text-sm font-semibold text-purple-950">
-                        Видих, секунди
+                    <div class="flex h-full flex-col">
+                      <label class="flex h-full flex-col text-sm font-semibold text-purple-950">
+                        <span class="block min-h-12">Видих, секунди</span>
                         <input name="breathExhale" data-breath-role="exhale" type="number" min="1" max="15" step="1" value="6" required class="mt-2 min-h-12 w-full rounded-xl border border-purple-200 bg-white px-4 py-3 text-slate-800 shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800">
                         <span class="mt-2 block text-sm font-normal text-slate-500">Від 1 до 15 секунд.</span>
                       </label>
@@ -326,12 +326,12 @@
                 <span><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i> 3 хвилини</span>
                 <span>Увага й відчуття</span>
               </div>
-              <details class="group mt-4">
-                <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
+              <details name="exercise-card" class="group mt-auto pt-4 open:flex open:flex-col">
+                <summary class="order-2 flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
                   <span class="group-open:hidden">До вправи</span><span class="hidden group-open:inline">Згорнути</span>
                   <i class="fa-solid fa-chevron-down text-xs transition group-open:rotate-180" aria-hidden="true"></i>
                 </summary>
-                <div>
+                <div class="order-1">
                   <figure class="mt-4">
                     <!-- YouTube integration: create the iframe only after the visitor explicitly asks to load it. -->
                     <div data-media-embed class="mx-auto aspect-video w-full max-w-2xl overflow-hidden rounded-2xl bg-slate-900">
@@ -376,12 +376,12 @@
                 <span><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i> 5 хвилин</span>
                 <span>Рефлексія</span>
               </div>
-              <details class="group mt-4">
-                <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
+              <details name="exercise-card" class="group mt-auto pt-4 open:flex open:flex-col">
+                <summary class="order-2 flex min-h-11 cursor-pointer list-none items-center justify-center gap-2 rounded-xl bg-purple-700 px-4 py-2 font-bold text-white shadow-sm transition duration-200 hover:bg-purple-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-800 focus-visible:shadow-md motion-reduce:transition-none">
                   <span class="group-open:hidden">До вправи</span><span class="hidden group-open:inline">Згорнути</span>
                   <i class="fa-solid fa-chevron-down text-xs transition group-open:rotate-180" aria-hidden="true"></i>
                 </summary>
-                <div class="mt-4 space-y-3 rounded-xl bg-purple-50 p-4 text-sm leading-6 text-slate-700">
+                <div class="order-1 mt-4 space-y-3 rounded-xl bg-purple-50 p-4 text-sm leading-6 text-slate-700">
                   <p><strong class="text-purple-950">Що сталося?</strong> Опиши ситуацію одним реченням.</p>
                   <p><strong class="text-purple-950">Що я відчуваю?</strong> Назви емоцію й поміть, як вона відчувається в тілі.</p>
                   <p><strong class="text-purple-950">Яка ще думка можлива?</strong> Спробуй знайти доброзичливіший погляд на ситуацію — без примусу.</p>
@@ -692,6 +692,20 @@
       });
 
       // Media integrations stay inert until the visitor activates their explicit load button.
+      document.querySelectorAll('details[name="exercise-card"]').forEach((details) => {
+        details.addEventListener("toggle", () => {
+          if (!details.open) {
+            return;
+          }
+
+          document.querySelectorAll('details[name="exercise-card"]').forEach((otherDetails) => {
+            if (otherDetails !== details) {
+              otherDetails.open = false;
+            }
+          });
+        });
+      });
+
       document.querySelectorAll("[data-media-trigger]").forEach((trigger) => {
         trigger.addEventListener("click", () => {
           const container = trigger.closest("[data-media-embed]");
